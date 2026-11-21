@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interactive Chessboard | Computer Graphics PBL</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>♟ Interactive Chessboard Graphic System</h1>
+      <p>Computer Graphics Project-Based Learning </p>
+    </header>
+    <main>
+      <section class="board-panel">
+        <canvas
+          id="board"
+          width="640"
+          height="640"
+          aria-label="Interactive chessboard"
+        ></canvas>
+        <div class="toolbar">
+          <button id="reset">Reset Game</button
+          ><button id="undo">Undo Move</button
+          ><label
+            ><input type="checkbox" id="coords" checked /> Coordinates</label
+          ><label
+            ><input type="checkbox" id="animate" checked /> Animation</label
+          >
+        </div>
+      </section>
+      <aside>
+        <div class="panel">
+          <h2>Game status</h2>
+          <p id="status" aria-live="polite">White to move</p>
+          <p id="selection">Click a piece to see valid moves.</p>
+          <p id="history">Moves: 0</p>
+        </div>
+        <div class="panel">
+          <h2>Computer Graphics Lab</h2>
+          <p>Explore algorithms on a second Canvas.</p>
+          <select id="demo">
+            <option value="dda">DDA line drawing</option>
+            <option value="bresenham">Bresenham line drawing</option>
+            <option value="circle">Midpoint circle drawing</option>
+            <option value="transform">2D transformation</option></select
+          ><canvas id="lab" width="320" height="240"></canvas>
+          <p id="explain"></p>
+        </div>
+        <div class="panel">
+          <h2>Graphics concepts used</h2>
+          <ul>
+            <li>Canvas 2D primitives and color filling</li>
+            <li>Grid-to-pixel coordinate mapping</li>
+            <li>Translation and scaling of shapes</li>
+            <li>Mouse hit-testing and animation</li>
+            <li>DDA, Bresenham, midpoint circle</li>
+          </ul>
+          <small
+            >Educational chess: standard moves, captures, turns, promotion and
+            basic king safety. No castling, en passant, or checkmate
+            adjudication.</small
+          >
+        </div>
+      </aside>
+    </main>
+    <footer>
+      CG PBL
+    </footer>
+    <script src="js/board.js"></script>
+    <script src="js/pieces.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/graphics-lab.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
